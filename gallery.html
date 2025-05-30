@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+        header {
+          background-color: #222;
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #444;
+          color: white;
+          padding: 10px 20px;
+        }
+        nav .menu {
+          display: flex;
+          gap: 15px;
+        }
+        nav .menu a {
+          color: white;
+          text-decoration: none;
+        }
+        nav .toggle {
+          display: none;
+          cursor: pointer;
+        }
+        .video-container {
+          position: relative;
+          width: 100%;
+          height: 400px;
+          overflow: hidden;
+        }
+        .video-container video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .video-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 2em;
+          text-shadow: 2px 2px 4px #000;
+        }
+        .content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          padding: 20px;
+        }
+        .card {
+          border: 1px solid #ccc;
+          padding: 10px;
+          background-color: #f9f9f9;
+        }
+        .card img {
+          width: 100%;
+          height: auto;
+        }
+        footer {
+          background-color: #222;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+          nav .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #444;
+            width: 100%;
+            margin-top: 10px;
+          }
+          nav .menu.active {
+            display: flex;
+          }
+          nav .toggle {
+            display: block;
+          }
+        }
+        .fade-target {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+        }
+      </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+        <img src="1630639426786.jpeg" width="40">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+          <a href="home.html">Home</a>
+          <a href="gallery.html">keturunan</a>
+          <a href="about.html">sultan Agung</a>
+          <a href="contact.html">Rating</a>
+        </div>
+      </nav>
+
+  </header>
+
+  <main>
+    <section class="content">
+    
+
+    <div class="card">
+      <img src="mataram 1.jpeg" alt="Image 1" />
+        <h2>Keturunan</h2>
+      <p>
+        Kerajaan Mataram Islam mencapai puncak kejayaannya pada masa pemerintahan Sultan Agung (1613–1645). Namun setelah wafatnya, kerajaan mengalami dinamika politik yang rumit. Penggantinya, Amangkurat I, tidak memiliki kapasitas kepemimpinan sekuat ayahnya dan cenderung otoriter, bahkan menindas kalangan ulama dan bangsawan.
+
+Ini menimbulkan konflik internal yang memuncak pada pemberontakan besar yang dipimpin oleh Trunajaya pada tahun 1674. Pemberontakan itu, ditambah dengan intervensi VOC (Belanda), menjadi pemicu utama melemahnya Kerajaan Mataram secara politis dan militer. VOC mulai ikut campur dalam urusan suksesi kerajaan, yang kelak menjadi faktor utama perpecahan kerajaan ini.
+
+
+---
+
+Perjanjian Giyanti (1755): Titik Perpecahan Utama
+
+Peristiwa penting yang menentukan arah keturunan Mataram adalah Perjanjian Giyanti tahun 1755. Dalam perjanjian ini, kerajaan Mataram dibagi menjadi dua kekuasaan:
+
+1. Kasunanan Surakarta (Solo)
+
+Dipimpin oleh Susuhunan Pakubuwono III, yang merupakan penerus resmi garis keturunan Mataram setelah direstui VOC.
+
+Keraton Kasunanan Surakarta berdiri di kota Solo dan mewarisi sebagian besar adat, gelar, dan tradisi Mataram.
+
+Meski berdaulat secara simbolis, kekuasaan raja sangat dibatasi oleh pengaruh Belanda.
+
+
+2. Kesultanan Yogyakarta
+
+Didirikan oleh Pangeran Mangkubumi, saudara Pakubuwono II, yang tidak setuju dengan dominasi VOC.
+
+Setelah berhasil merebut dukungan rakyat dan kekuatan militer, ia diakui melalui Perjanjian Giyanti dan bergelar Sultan Hamengkubuwono I.
+
+Kesultanan ini bermarkas di kota Yogyakarta dan lebih menunjukkan kemandirian politik serta budaya.
+
+
+Kedua kerajaan ini, meski memiliki akar dari Mataram Islam, berkembang menjadi kekuasaan yang terpisah secara administrasi dan politik, namun tetap membawa semangat serta budaya kerajaan induk.
+
+
+---
+
+Perpecahan Tambahan: Kadipaten Mangkunegaran dan Kadipaten Pakualaman
+
+Setelah Giyanti, konflik internal terus berlanjut, termasuk pertikaian antara keluarga kerajaan dan keturunan yang merasa tidak puas. Ini melahirkan dua entitas kerajaan tambahan:
+
+3. Kadipaten Mangkunegaran (1757)
+
+Berdiri di Surakarta sebagai hasil kompromi antara Raden Mas Said (Pangeran Sambernyawa) dan VOC.
+
+Ia diberi wilayah dan gelar Adipati Mangkunegara I, membentuk keraton sendiri namun tetap dalam naungan Kasunanan Surakarta.
+
+
+4. Kadipaten Pakualaman (1813)
+
+Berdiri di Yogyakarta atas restu Inggris (di bawah Gubernur Jenderal Thomas Stamford Raffles).
+
+Dipimpin oleh Pangeran Notokusumo, adik Sultan Hamengkubuwono II, yang kemudian bergelar Paku Alam I.
+
+Fungsinya mirip dengan Mangkunegaran di Surakarta, yakni sebagai pengimbang internal.
+
+
+
+---
+
+Keturunan-Keturunan dan Peran Mereka Setelah Masa Kerajaan
+
+Meskipun kekuasaan politik keturunan Mataram menurun drastis setelah kedatangan kolonialisme, peran mereka tetap penting dalam bidang budaya, adat, dan simbolik politik. Bahkan hingga era kemerdekaan Indonesia, keturunan ini masih memainkan peran signifikan:
+
+1. Kesultanan Yogyakarta
+
+Salah satu yang paling bertahan secara kuat.
+
+Sri Sultan Hamengkubuwono IX adalah tokoh kunci dalam perjuangan kemerdekaan Indonesia. Ia mendukung Republik Indonesia sejak awal dan bahkan menyerahkan wilayah Yogyakarta sebagai Daerah Istimewa, yang statusnya diakui hingga kini.
+
+Kini diteruskan oleh Sri Sultan Hamengkubuwono X, yang juga menjabat sebagai Gubernur DIY. Ini menjadikan Yogyakarta sebagai daerah kerajaan yang masih berfungsi dalam struktur pemerintahan modern Indonesia.
+
+
+2. Kasunanan Surakarta
+
+Pasca kemerdekaan, posisi Kasunanan semakin melemah secara politis.
+
+Namun masih berfungsi sebagai pusat kebudayaan Jawa klasik.
+
+Dikepalai oleh Pakubuwono XIII (dua versi sempat muncul karena konflik internal, namun kemudian ada rekonsiliasi).
+
+Surakarta tidak diakui sebagai daerah istimewa oleh pemerintah RI seperti Yogyakarta.
+
+
+3. Kadipaten Mangkunegaran
+
+Berperan besar dalam pelestarian budaya.
+
+Dipimpin oleh Mangkunegara X saat ini.
+
+Memiliki pengaruh dalam kebudayaan Solo, termasuk dalam bidang tari, gamelan, dan pakaian adat.
+
+
+4. Kadipaten Pakualaman
+
+Berada dalam wilayah Yogyakarta.
+
+Dipimpin oleh Paku Alam X, yang juga menjadi Wakil Gubernur DIY secara otomatis, berpasangan dengan Sultan Yogyakarta.
+
+
+
+---
+
+Warisan Budaya dan Simbolik
+
+Meskipun tidak lagi berkuasa secara politik penuh, keturunan Mataram Islam tetap memegang peranan penting dalam hal:
+
+Pelestarian budaya Jawa: Tari-tarian klasik, gamelan, upacara adat, pakaian keraton, dan upacara grebeg.
+
+Pendidikan spiritual dan nilai adiluhung Jawa.
+
+Simbol kontinuitas sejarah Indonesia: Keraton-keraton ini tetap dikunjungi dan dihormati, baik oleh rakyat maupun pejabat negara.
+
+
+
+---
+
+Kesimpulan
+
+Keturunan Kerajaan Mataram Islam tidak berakhir dengan keruntuhan politiknya. Mereka justru berkembang menjadi empat pusat budaya yang masih bertahan hingga kini:
+
+1. Kesultanan Yogyakarta – masih memiliki kekuasaan resmi sebagai provinsi istimewa.
+
+
+2. Kasunanan Surakarta – pelestari budaya, meski tak lagi memiliki kekuasaan administratif.
+
+
+3. Kadipaten Mangkunegaran – simbol kebangsawanan Solo.
+
+
+4. Kadipaten Pakualaman – bagian dari struktur pemerintahan DIY.
+
+
+
+Dengan begitu, Mataram Islam tidak hanya hidup dalam buku sejarah, tapi juga terus bernafas dalam kehidupan budaya dan simbolik masyarakat Jawa.
+
+      </p>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © <span id="currentYear"></span></p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

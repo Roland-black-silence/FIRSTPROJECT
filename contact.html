@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="script.js" defer></script>
+    <style>
+        body, html {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+        }
+        header {
+          background-color: #222;
+          color: white;
+          padding: 20px;
+          text-align: center;
+        }
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #444;
+          color: white;
+          padding: 10px 20px;
+        }
+        nav .menu {
+          display: flex;
+          gap: 15px;
+        }
+        nav .menu a {
+          color: white;
+          text-decoration: none;
+        }
+        nav .toggle {
+          display: none;
+          cursor: pointer;
+        }
+        .video-container {
+          position: relative;
+          width: 100%;
+          height: 400px;
+          overflow: hidden;
+        }
+        .video-container video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .video-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 2em;
+          text-shadow: 2px 2px 4px #000;
+        }
+        .content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+          padding: 20px;
+        }
+        .card {
+          border: 1px solid #ccc;
+          padding: 10px;
+          background-color: #f9f9f9;
+        }
+        .card img {
+          width: 100%;
+          height: auto;
+        }
+        footer {
+          background-color: #222;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+          nav .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #444;
+            width: 100%;
+            margin-top: 10px;
+          }
+          nav .menu.active {
+            display: flex;
+          }
+          nav .toggle {
+            display: block;
+          }
+        }
+        .fade-target {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+        }
+      </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Contact</h1>
+    <nav>
+        <img src="1630639426786.jpeg" width="40">
+        <div class="toggle" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+          <a href="home.html">Home</a>
+          <a href="gallery.html">Keturunan</a>
+          <a href="about.html">Sultan Agung</a>
+          <a href="contact.html">Rating</a>
+        </div>
+      </nav>
+  </header>
+
+  <main>
+    <section class="contact-form-section">
+      <div class="fade-target bordered">
+        <h2>Get in Touch</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © <span id="currentYear"></span></p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
+  
+    <form method="POST">
+        <label>Select Rating:</label><br>
+        <select name="rating">
+            <option value="1">1 ⭐</option>
+            <option value="2">2 ⭐⭐</option>
+            <option value="3">3 ⭐⭐⭐</option>
+            <option value="4">4 ⭐⭐⭐⭐</option>
+            <option value="5">5 ⭐⭐⭐⭐⭐</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if avg_rating %}
+        <p>Average Rating: {{ avg_rating }} / 5</p>
+        <p>Total Ratings: {{ total }}</p>
+    {% else %}
+        <p>No ratings yet.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Video Website</title>
+  <style>
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+    }
+    nav .menu {
+      display: flex;
+      gap: 15px;
+    }
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+    }
+    nav .toggle {
+      display: none;
+      cursor: pointer;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav .menu.active {
+        display: flex;
+      }
+      nav .toggle {
+        display: block;
+      }
+    }
+    .fade-target {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out,
+            transform 0.6s ease-out;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maratam</h1>
+  </header>
+  <nav>
+    <img src="1630639426786.jpeg" width="40">
+    <div class="toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="home.html">Home</a>
+      <a href="gallery.html">Keturunan</a>
+      <a href="about.html">Sultan Agung</a>
+      <a href="contact.html">Rating</a>
+    </div>
+  </nav>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="Runtuhnya Kerajaan Tarumanegara oleh Kerajaan Sriwijaya.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-text">Welcome to My World</div>
+  </div>
+  <section class="content">
+    <div class="card">
+      <img src="makam.jpg" alt="Image 1" />
+      <h1>Makam Raja-Raja Imogiri</h1>
+      <p>
+        Lambang kekuasaan spiritual dan penghormatan terhadap leluhur raja. Menyimbolkan hubungan antara dunia fana dan akhirat.
+      </p>
+    </div>
+    <div class="card">
+      <img src="kalender.jpg" alt="Image 2" />
+      <h1>Kalender Jawa Sultan Agung
+</h1>
+      <p>Upaya menyatukan tradisi Jawa lama dengan nilai-nilai Islam, menciptakan identitas kultural yang khas bagi rakyat Jawa.
+</p>
+    </div>
+    <div class="card">
+      <img src="Masjid_Mataram_Kotagede.jpg" alt="Image 3" />
+      <h1> Masjid Agung Kotagede</h1>
+      <p>Perpaduan arsitektur Jawa dan fungsi keislaman. Lambang penyebaran Islam lewat budaya lokal.
+</p>
+    </div>
+    <div class="card">
+      <img src="keraton ko.jpeg" alt="Image 4" />
+      <h1>Kraton Kotagede
+</h1>
+      <p>Ibu Kota Pertama di Kesultanan Mataram</p>
+    </div>
+    <div class="card">
+      <img src="sastra.jpg" alt="Image 4" />
+      <h1> Sastra dan Babad Mataram
+</h1>
+      <p>Naskah-naskah sejarah dan sastra dalam bahasa Jawa (contoh: Babad Tanah Jawi).
+</p>
+    </div>
+    <div class="card">
+      <img src="benteng-cepuri-kotagede-3_169.jpeg" alt="Image 4" />
+      <h1>Benteng Cepuri</h1>
+      <p> situs peninggalan Kerajaan Mataram Islam di Kotagede yang berwujud rerutuhan-reruntuhan yang masih tersisa dari benteng yang dahulunya dibangun untuk melindungi Kedhaton atau Keraton Mataram</p>
+    </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 My Fantasy Website</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
